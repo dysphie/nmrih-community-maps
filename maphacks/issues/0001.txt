@@ -1,0 +1,36 @@
+"MapHack"
+{
+	"entities"
+	{
+		$remove_connections{ "targetname" "entrance_trigger" }
+
+		$edit
+		{
+			"targetname" "entrance_trigger"
+			"keyvalues"
+			{
+				"connections"
+				{
+					"OnTrigger" "entrance_rocks,Break,,6.05,-1"
+					"OnTrigger" "entrance_wall,AddOutput,origin 3000 3000 3000,,6.05,-1"
+					"OnTrigger" "dynamic_entrance_tnt,Break,,6,-1"
+					"OnTrigger" "phys_entrance_tnt,Kill,,0,-1"
+					"OnTrigger" "entrance_exp_sound,PlaySound,,6,-1"
+					"OnTrigger" "entrance_shout,PlaySound,,0,-1"
+					"OnTrigger" "maker_start,Enable,,6.1,-1"
+					"OnTrigger" "entrance_exp,Explode,,6,-1"
+					"OnTrigger" "entrance_hurt,Enable,,6,-1"
+					"OnTrigger" "entrance_hurt,Disable,,7,-1"
+					"OnTrigger" "entrance_spark,StartSpark,,0,-1"
+					"OnTrigger" "entrance_spark,StopSpark,,6,-1"
+					"OnTrigger" "dynamic_entrance_tnt,Kill,,6.01,-1"
+					"OnTrigger" "dynamic_entrance_tnt,TurnOn,,0,-1"
+					"OnTrigger" "first_areaportal,Open,,10,-1"
+					"OnTrigger" "entrance_rocks_b,Break,,6.05,-1"
+					"OnTrigger" "spawner_area_0,ForceSpawn,,10,-1"
+					"OnTrigger" "spawner_area_0b,ForceSpawn,,10,-1"
+				}
+			}
+		}		
+	}
+}
