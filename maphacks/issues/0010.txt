@@ -1,0 +1,24 @@
+"MapHack"
+{
+	"entities"
+	{
+		"instant_trigger"
+		{
+			"origin" "1840 2176 -54"
+			"keyvalues"
+			{
+				"allowAll" "0"
+				"allowNPCs" "0"
+				"allowPhysics" "0"
+				"allowPlayers" "1"
+				"noclear" "0"
+				"radius" "48"
+				"StartDisabled" "0"
+				"connections"
+				{
+					"OnTrigger" "manhole_2,Break,,0,-1"
+				}
+			}
+		}
+	}
+}

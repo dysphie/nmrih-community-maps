@@ -1,0 +1,7 @@
+"MapHack"
+{
+	"includes"
+	{
+		"file"	"maps/maphacks/issues/0010.txt"
+	}
+}

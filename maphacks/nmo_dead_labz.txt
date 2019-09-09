@@ -1,0 +1,7 @@
+"MapHack"
+{
+	"includes"
+	{
+		"file"	"maps/maphacks/nmo_dead_labs.txt"
+	}
+}
