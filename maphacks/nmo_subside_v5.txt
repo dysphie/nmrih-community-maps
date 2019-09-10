@@ -1,0 +1,60 @@
+"MapHack"
+{
+	"entities"
+	{
+		//Respawn props that were getting deleted for being the wrong type
+		//Airboat engine
+		"prop_dynamic_override"
+		{
+			"origin" "139 645 211"
+			"angles" "17.3956 320.032 19.6316"
+			"keyvalues"
+			{
+				"model" "models/gibs/airboat_broken_engine.mdl"
+				"solid" "0"
+			}
+		}
+
+		//Concrete chunks
+		"prop_dynamic_override"
+		{
+			"origin" "3712 610 703"
+			"angles" "13.7208 260.237 -5.8857"
+			"keyvalues"
+			{
+				"model" "models/props_debris/concrete_chunk01c.mdl"
+				"solid" "0"	
+			}
+		}
+
+		"prop_dynamic_override"
+		{
+			"origin" "3742 724 726"
+			"angles" "-39.3947 272.108 -91.7945"
+			"keyvalues"
+			{
+				"model" "models/props_debris/concrete_chunk01c.mdl"
+				"solid" "0"	
+			}
+		}
+
+		$edit_all
+		{	
+			//Fix subdued glows
+			"classname" "nmrih_objective_boundary"
+			"keyvalues"
+			{
+				"GlowEntity1Color" "230 0 0"
+				"GlowEntity2Color" "230 0 0"
+				"GlowEntity3Color" "230 0 0"
+				"GlowEntity4Color" "230 0 0"
+				"GlowEntity5Color" "230 0 0"
+				"GlowEntity6Color" "230 0 0"
+				"GlowEntity7Color" "230 0 0"
+				"GlowEntity8Color" "230 0 0"
+				"GlowEntity9Color" "230 0 0"
+				"GlowEntity10Color" "230 0 0"
+			}
+		}
+	}
+}
