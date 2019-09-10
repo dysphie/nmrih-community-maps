@@ -1,0 +1,195 @@
+"MapHack"
+{
+	"entities"
+	{
+		// Debrify chairs
+		$remove { "id" "136632" }
+		"prop_physics"
+		{
+			"origin" "-105 3421 148"
+			"angles" "0 315 0"
+			"keyvalues"
+			{
+				"spawnflags" "262" 
+				"model" "models/props_wasteland/controlroom_chair001a.mdl"
+			}
+		}
+
+		$remove { "id" "136655" }
+		"prop_physics"
+		{
+			"origin" "6 3435 148"
+			"angles" "0 240 0"
+			"keyvalues"
+			{
+				"spawnflags" "262" 
+				"model" "models/props_wasteland/controlroom_chair001a.mdl"
+			}
+		}
+
+		// Debrify bottles
+		$remove { "id" "1017008" }
+		"prop_physics"
+		{
+			"origin" "-1776 1280 184"
+			"angles" "0 100 0"
+			"keyvalues"
+			{
+				"spawnflags" "260"
+				"model" "models/props_junk/garbage_glassbottle001a.mdl"
+			}
+		}
+
+		$remove { "id" "136530" }
+		"prop_physics"
+		{
+			"origin" "65 3348 168"
+			"keyvalues"
+			{
+				"spawnflags" "260"
+				"model" "models/props_junk/garbage_glassbottle001a.mdl"
+			}
+		}
+
+		$remove { "id" "1016974" }
+		"prop_physics"
+		{
+			"origin" "-1763 1291 184"
+			"keyvalues"
+			{
+				"spawnflags" "260"
+				"model" "models/props_junk/garbage_glassbottle001a.mdl"
+			}
+		}
+
+		// Debrify cartons
+		$remove { "id" "136448" }
+		"prop_physics"
+		{
+			"origin" "57 3363 168"
+			"angles" "0 100 0"
+			"keyvalues"
+			{
+				"spawnflags" "260"
+				"model" "models/props_junk/garbage_takeoutcarton001a.mdl"
+			}
+		}
+
+		$remove { "id" "136483" }
+		"prop_physics"
+		{
+			"origin" "46 3345 168"
+			"angles" "0 60 0"
+			"keyvalues"
+			{
+				"spawnflags" "260"
+				"model" "models/props_junk/garbage_takeoutcarton001a.mdl"
+			}
+		}
+
+		$remove { "id" "1017020" }
+		"prop_physics"
+		{
+			"origin" "-1784 1296 181"
+			"angles" "0 100 0"
+			"keyvalues"
+			{
+				"spawnflags" "260"
+				"model" "models/props_junk/garbage_takeoutcarton001a.mdl"
+			}
+		}
+
+		// Debrify paint cans
+		$remove { "id" "1145238" }
+		"prop_physics"
+		{
+			"origin" "1408 2352 361"
+			"keyvalues"
+			{
+				"spawnflags" "260"
+				"model" "models/props_junk/metal_paintcan001b.mdl"
+			}
+		}
+
+		$remove { "id" "1145257" }
+		"prop_physics"
+		{
+			"origin" "1392 2321 361"
+			"keyvalues"
+			{
+				"spawnflags" "260"
+				"model" "models/props_junk/metal_paintcan001b.mdl"
+			}
+		}
+	}
+
+	"vars"
+	{
+		"bRespawnedPropane" { "type" "int" "value" "0" }
+	}
+
+	// Map uses point_templates for certain items
+	// so we must wait for them to spawn
+	"events"
+	{
+		"Whatever" // This will fire OnObjectiveItemSpawned due to a bug
+		{
+			"type"			"EVENT_OUTPUT"
+			"targetname"	"radiokeyTEMP"
+			"output"		"OnEntitySpawned"
+		}
+
+		"OnObjectiveItemSpawned"
+		{
+			"type"			"EVENT_OUTPUT"
+			"targetname"	"propaneTEMP2"
+			"output"		"OnEntitySpawned"
+		}
+	}
+
+
+	"OnObjectiveItemSpawned" 
+	{
+		// We are limited to a single event now
+		// Use variable to dictate spawning
+		$if
+		{
+			"cond" "bRespawnedPropane == 1"			
+			"entities"
+			{
+				// Respawn manually, $respawn breaks +use 
+				$remove { "targetname" "radiokey" }
+				"prop_physics_override"
+				{
+					"targetname" "radiokey"
+					"origin" "-2209 6509 -232"
+					"keyvalues"
+					{
+						"model" "models/props/objectives/key_old.mdl"
+						"spawnflags" "260"
+					}
+				}
+			}
+		}
+
+		$if
+		{
+			"cond" "bRespawnedPropane == 0"	
+			"entities"
+			{
+				$remove { "targetname"	"propaneGET" }
+				"prop_physics"
+				{
+					"targetname" "propaneGET"
+					"origin" "2283 2575 1"
+					"keyvalues"
+					{
+						"model" "models/props/objectives/propane.mdl"
+						"spawnflags" "263"
+					}
+				}
+				$set { "var" "bRespawnedPropane" "value" "1" }
+			}
+		}
+	}
+}
