@@ -1,0 +1,43 @@
+"MapHack"
+{
+	"entities"
+	{
+
+		// Make these props debris for improved navigation and exploit prevention
+		$edit_field { "targetname" "crowbar" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "heli" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "keycard" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "keycard_objective_03" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "melon" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "pumpkin" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "end_pumpkin" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "end_heli" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "end_weed" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "end_lunch" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "end_melon" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "weed" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "lunch" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "id" "861150" "fieldname" "m_CollisionGroup" "value" "1"} //pumpkin.mdl
+		$edit_field { "id" "775663" "fieldname" "m_CollisionGroup" "value" "1"} //cb_weed03.mdl
+
+		// The pickaxe makes players fly and get stuck in geometry
+		// We respawn it as debris but increase its damage to retain functionality
+		"prop_physics_override"
+		{
+			"targetname" "pickaxe_fixed"
+			"origin" "2776 2847.7 474.627"
+			"angles" "15 90 0"
+			"keyvalues"
+			{
+				"spawnflags" "260"
+				"model" "models/props/misc/cb_pickaxe.mdl"
+			}
+		}
+
+		$fire { "id" "820253" "input" "SetParent" "value" "pickaxe_fixed" }
+		$fire { "id" "820253" "input" "AddOutput" "value" "spawnflags 2" }
+		$fire { "id" "820253" "input" "AddOutput" "value" "damage 2000" }
+		$remove { "targetname" "pickaxe" }
+		$remove { "targetname" "pickaxe_physbox" }
+	}
+}
