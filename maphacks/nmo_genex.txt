@@ -4,21 +4,25 @@
 	{
 
 		// Make these props debris for improved navigation and exploit prevention
+		$edit_field { "id" "696250" "fieldname" "m_CollisionGroup" "value" "1" } //nmrih_body_parts_04a.mdl
+		$edit_field { "id" "775663" "fieldname" "m_CollisionGroup" "value" "1"} //cb_weed03.mdl
+		$edit_field { "id" "813077" "fieldname" "m_CollisionGroup" "value" "1" } //bedroll.mdl
+		$edit_field { "id" "861150" "fieldname" "m_CollisionGroup" "value" "1"} //pumpkin.mdl
 		$edit_field { "targetname" "crowbar" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "crowbar_invisible" "fieldname" "m_CollisionGroup" "value" "1" } //w_crowbar.mdl
+		$edit_field { "targetname" "end_heli" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "end_lunch" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "end_melon" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "end_pumpkin" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "end_weed" "fieldname" "m_CollisionGroup" "value" "1"}
 		$edit_field { "targetname" "heli" "fieldname" "m_CollisionGroup" "value" "1"}
 		$edit_field { "targetname" "keycard" "fieldname" "m_CollisionGroup" "value" "1"}
 		$edit_field { "targetname" "keycard_objective_03" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field { "targetname" "lunch" "fieldname" "m_CollisionGroup" "value" "1"}
 		$edit_field { "targetname" "melon" "fieldname" "m_CollisionGroup" "value" "1"}
 		$edit_field { "targetname" "pumpkin" "fieldname" "m_CollisionGroup" "value" "1"}
-		$edit_field { "targetname" "end_pumpkin" "fieldname" "m_CollisionGroup" "value" "1"}
-		$edit_field { "targetname" "end_heli" "fieldname" "m_CollisionGroup" "value" "1"}
-		$edit_field { "targetname" "end_weed" "fieldname" "m_CollisionGroup" "value" "1"}
-		$edit_field { "targetname" "end_lunch" "fieldname" "m_CollisionGroup" "value" "1"}
-		$edit_field { "targetname" "end_melon" "fieldname" "m_CollisionGroup" "value" "1"}
 		$edit_field { "targetname" "weed" "fieldname" "m_CollisionGroup" "value" "1"}
-		$edit_field { "targetname" "lunch" "fieldname" "m_CollisionGroup" "value" "1"}
-		$edit_field { "id" "861150" "fieldname" "m_CollisionGroup" "value" "1"} //pumpkin.mdl
-		$edit_field { "id" "775663" "fieldname" "m_CollisionGroup" "value" "1"} //cb_weed03.mdl
+		$fire { "id" "812437" "input" "DisableMotion" } //wood_crate001a.mdl
 
 		// The pickaxe makes players fly and get stuck in geometry
 		// We respawn it as debris but increase its damage to retain functionality
