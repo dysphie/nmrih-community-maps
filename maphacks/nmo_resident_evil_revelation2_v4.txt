@@ -1,0 +1,74 @@
+"MapHack"
+{
+	"entities"
+	{
+		$edit_field { "id" "101109" "fieldname" "m_CollisionGroup" "value" "1" } // cardboard_box004a.mdl
+		$edit_field { "id" "133210" "fieldname" "m_CollisionGroup" "value" "1" } // wood_pallet001a.mdl
+		$edit_field { "id" "2194" "fieldname" "m_CollisionGroup" "value" "1" } // ng_cleopas_ladder.mdl
+		$edit_field { "id" "2198" "fieldname" "m_CollisionGroup" "value" "1" } // wood_crate001a_chunk01.mdl
+		$edit_field { "id" "2279" "fieldname" "m_CollisionGroup" "value" "1" } // cardboard_box003a.mdl
+		$edit_field { "id" "2526" "fieldname" "m_CollisionGroup" "value" "1" } // cardboard_box004a.mdl
+		$edit_field { "id" "2564" "fieldname" "m_CollisionGroup" "value" "1" } // fallout_cinderblock_1.mdl
+		$edit_field { "id" "2568" "fieldname" "m_CollisionGroup" "value" "1" } // fallout_cinderblock_1.mdl
+		$edit_field { "id" "2572" "fieldname" "m_CollisionGroup" "value" "1" } // fallout_cinderblock_1.mdl
+		$edit_field { "id" "2576" "fieldname" "m_CollisionGroup" "value" "1" } // fallout_cinderblock_1.mdl
+		$edit_field { "id" "2580" "fieldname" "m_CollisionGroup" "value" "1" } // fallout_cinderblock_1_gib2.mdl
+		$edit_field { "id" "2584" "fieldname" "m_CollisionGroup" "value" "1" } // fallout_cinderblock_1_gib1.mdl
+		$edit_field { "id" "2588" "fieldname" "m_CollisionGroup" "value" "1" } // fallout_cinderblock_1.mdl
+		$edit_field { "id" "2715" "fieldname" "m_CollisionGroup" "value" "1" } // propane_flamethrower_fuel_empty.mdl
+		$edit_field { "id" "2719" "fieldname" "m_CollisionGroup" "value" "1" } // propane_flamethrower_fuel_empty.mdl
+		$edit_field { "id" "2860" "fieldname" "m_CollisionGroup" "value" "1" } // furniturechair001a.mdl
+		$edit_field { "id" "3024" "fieldname" "m_CollisionGroup" "value" "1" } // nmrih_officebox_gib1.mdl
+		$edit_field { "id" "3375" "fieldname" "m_CollisionGroup" "value" "1" } // chair02a.mdl
+		$edit_field { "id" "5178" "fieldname" "m_CollisionGroup" "value" "1" } // chair02a.mdl
+		$edit_field { "id" "5182" "fieldname" "m_CollisionGroup" "value" "1" } // chair02a.mdl
+		$edit_field { "id" "5186" "fieldname" "m_CollisionGroup" "value" "1" } // chair02a.mdl
+		$edit_field { "id" "5410" "fieldname" "m_CollisionGroup" "value" "1" } // barrel01.mdl
+		
+		$edit_field { "targetname" "key_door_open" "fieldname" "m_CollisionGroup" "value" "1" } // clover_key.mdl
+		$edit_field { "targetname" "key_exit" "fieldname" "m_CollisionGroup" "value" "1" } // diamond_key.mdl
+		$edit_field { "targetname" "rusty_key" "fieldname" "m_CollisionGroup" "value" "1" } // *8
+
+		$fire { "id" "5618" "input" "DisableMotion" } // prop_physics
+		
+		// Fix glass not breaking on punch
+		$edit_field { "id" "2995" "fieldname" "m_iMinHealthDmg" "value" "0" }
+
+		// Delete locker doors after they blow open
+		$edit
+		{
+			"targetname" "door_pushed"
+			"keyvalues"
+			{
+				"connections"
+				{
+					"OnMotionEnabled" "!self,Kill,,1.0,-1"
+				}
+			}
+		}
+
+		$edit
+		{
+			"targetname" "door_pushed2"
+			"keyvalues"
+			{
+				"connections"
+				{
+					"OnMotionEnabled" "!self,Kill,,1.0,-1"
+				}
+			}
+		}
+
+		$edit
+		{
+			"targetname" "door_pushed3"
+			"keyvalues"
+			{
+				"connections"
+				{
+					"OnMotionEnabled" "!self,Kill,,1.0,-1"
+				}
+			}
+		}
+	}
+}
