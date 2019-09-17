@@ -1,8 +1,125 @@
 "MapHack"
 {
-	"includes"
+	"vars"
 	{
-		"file"	"maps/maphacks/issues/0003.txt"
-		"file"	"maps/maphacks/issues/0004.txt"
+		"bRespawnedPropane" { "type" "int" "value" "0" }
+	}
+
+	// Debrify late-spawning items
+	"events"
+	{
+		"Whatever" // This will fire OnObjectiveItemSpawned due to a bug
+		{
+			"type"			"EVENT_OUTPUT"
+			"targetname"	"radiokeyTEMP"
+			"output"		"OnEntitySpawned"
+		}
+
+		"OnObjectiveItemSpawned"
+		{
+			"type"			"EVENT_OUTPUT"
+			"targetname"	"propaneTEMP2"
+			"output"		"OnEntitySpawned"
+		}
+	}
+
+
+	"OnObjectiveItemSpawned" 
+	{
+		$if
+		{
+			"cond" "bRespawnedPropane == 1"			
+			"entities"
+			{
+				$edit_field { "targetname" "radiokey" "fieldname" "m_CollisionGroup" "value" "1" }
+			}
+		}
+
+		$if
+		{
+			"cond" "bRespawnedPropane == 0"	
+			"entities"
+			{
+				$edit_field { "targetname"	"propaneGET" "fieldname" "m_CollisionGroup" "value" "1" }
+				$set { "var" "bRespawnedPropane" "value" "1" }
+			}
+		}
+	}
+
+	"entities"
+	{
+		// Debrify misc junk props
+		$edit_field { "id" "136632"  "fieldname" "m_CollisionGroup" "value" "1" }
+		$edit_field { "id" "136655"  "fieldname" "m_CollisionGroup" "value" "1" }
+		$edit_field { "id" "1017008" "fieldname" "m_CollisionGroup" "value" "1" } 
+		$edit_field { "id" "136530"  "fieldname" "m_CollisionGroup" "value" "1" }
+		$edit_field { "id" "1016974" "fieldname" "m_CollisionGroup" "value" "1" } 
+		$edit_field { "id" "136448"  "fieldname" "m_CollisionGroup" "value" "1" }
+		$edit_field { "id" "136483"  "fieldname" "m_CollisionGroup" "value" "1" }
+		$edit_field { "id" "1017020" "fieldname" "m_CollisionGroup" "value" "1" }
+		$edit_field { "id" "1145238" "fieldname" "m_CollisionGroup" "value" "1" }
+		$edit_field { "id" "1145257" "fieldname" "m_CollisionGroup" "value" "1" }
+
+		// Continuous I/O leads to crashes on round restart
+		$remove { "targetname" "flickertimer" }
+
+		// Aid the reading of bloomy screens in HDR settings
+		"game_text"
+		{
+			"targetname" "screenreader"
+			"keyvalues"
+			{
+				"channel" "1"
+				"color" "255 255 255"
+				"color2" "255 0 0"
+				"effect" "0"
+				"fadein" "0.3"
+				"fadeout" "0.3"
+				"fxtime" "0"
+				"holdtime" "0.5"
+				"spawnflags" "0"
+				"x" "-1"
+				"y" "-1"
+			}
+		}
+
+		"instant_trigger"
+		{
+			"origin" "1146 760 96"
+			"targetname" "screentrigger"
+			"keyvalues"
+			{
+				"allowPlayers" "1"
+				"radius" "80" 
+				"noclear" "1" 
+				"connections"
+				{
+					"OnTrigger" "screenreader,Display,,0,-1"
+				}
+			}
+		}
+
+		$edit
+		{
+			"targetname" "coderandom"
+			"keyvalues"
+			{
+				"connections"
+				{
+					"OnCase01" "screenreader,AddOutput,message 5487,0,-1"
+					"OnCase02" "screenreader,AddOutput,message 5910,0,-1"
+					"OnCase03" "screenreader,AddOutput,message 3001,0,-1"
+					"OnCase04" "screenreader,AddOutput,message 6194,0,-1"
+					"OnCase05" "screenreader,AddOutput,message 2849,0,-1"
+					"OnCase06" "screenreader,AddOutput,message 7791,0,-1"
+					"OnCase07" "screenreader,AddOutput,message 2283,0,-1"
+					"OnCase08" "screenreader,AddOutput,message 0236,0,-1"
+					"OnCase09" "screenreader,AddOutput,message 3961,0,-1"
+					"OnCase10" "screenreader,AddOutput,message 4720,0,-1"
+					"OnCase11" "screenreader,AddOutput,message 6679,0,-1"
+					"OnCase12" "screenreader,AddOutput,message 7836,0,-1"
+				}
+			}
+		}		
 	}
 }
