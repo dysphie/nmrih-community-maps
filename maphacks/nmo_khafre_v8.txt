@@ -4,4 +4,19 @@
 	{
 		"file"	"maps/maphacks/issues/0001.txt"
 	}
+
+	"entities"
+	{
+		// Make puzzle parts debris
+		$edit_field {"targetname" "ball_blue" 	"fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field {"targetname" "ball_yellow" "fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field {"targetname" "ball_green" 	"fieldname" "m_CollisionGroup" "value" "1"}
+		$edit_field {"targetname" "ball_red" 	"fieldname" "m_CollisionGroup" "value" "1"}
+
+		// Prevent people from dying to puzzle pillars
+		$edit_field {"targetname" "blue_pillar_puzzle1" 	"fieldname" "m_flBlockDamage" "value" "0"}
+		$edit_field {"targetname" "yellow_pillar_puzzle1" 	"fieldname" "m_flBlockDamage" "value" "0"}
+		$edit_field {"targetname" "green_pillar_puzzle1" 	"fieldname" "m_flBlockDamage" "value" "0"}
+		$edit_field {"targetname" "red_pillar_puzzle1" 		"fieldname" "m_flBlockDamage" "value" "0"}
+	}
 }
