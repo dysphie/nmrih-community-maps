@@ -1,0 +1,77 @@
+"MapHack"
+{
+	"entities"
+	{
+		$edit_field { "id" "111342" "fieldname" "m_CollisionGroup" "value" "1" } // nmrih_office_plant1.mdl
+		$edit_field { "id" "1213770" "fieldname" "m_CollisionGroup" "value" "1" } // wood_pallet001a.mdl
+		$edit_field { "id" "1213789" "fieldname" "m_CollisionGroup" "value" "1" } // wood_pallet001a_chunka.mdl
+		$edit_field { "id" "1213808" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_plasticbottle002a.mdl
+		$edit_field { "id" "1213835" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_plasticbottle003a.mdl
+		$edit_field { "id" "1255267" "fieldname" "m_CollisionGroup" "value" "1" } // door01_right.mdl
+		$edit_field { "id" "127571" "fieldname" "m_CollisionGroup" "value" "1" } // wood_pallet001a.mdl
+		$edit_field { "id" "127602" "fieldname" "m_CollisionGroup" "value" "1" } // bluebarrel001.mdl
+		$edit_field { "id" "127637" "fieldname" "m_CollisionGroup" "value" "1" } // door01_left.mdl
+		$edit_field { "id" "128809" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_plasticbottle002a.mdl
+		$edit_field { "id" "128839" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_plasticbottle003a.mdl
+		$edit_field { "id" "128907" "fieldname" "m_CollisionGroup" "value" "1" } // wood_crate001a.mdl
+		$edit_field { "id" "133968" "fieldname" "m_CollisionGroup" "value" "1" } // metalgascan.mdl
+		$edit_field { "id" "134041" "fieldname" "m_CollisionGroup" "value" "1" } // cardboard_box003b.mdl
+		$edit_field { "id" "1510603" "fieldname" "m_CollisionGroup" "value" "1" } // wood_pallet001a.mdl		
+		$edit_field { "id" "177221" "fieldname" "m_CollisionGroup" "value" "1" } // firework_box.mdl
+		$edit_field { "id" "196313" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_glassbottle002a.mdl
+		$edit_field { "id" "196464" "fieldname" "m_CollisionGroup" "value" "1" } // wood_pallet001a.mdl
+		$edit_field { "id" "199505" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_bag001a.mdl
+		$edit_field { "id" "199524" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_metalcan002a.mdl
+		$edit_field { "id" "201205" "fieldname" "m_CollisionGroup" "value" "1" } // consolebox05a.mdl
+		$edit_field { "id" "202285" "fieldname" "m_CollisionGroup" "value" "1" } // ng_cleopas_ladder.mdl
+		$edit_field { "id" "206184" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_milkcarton002a.mdl
+		$edit_field { "id" "244796" "fieldname" "m_CollisionGroup" "value" "1" } // nmrih_office_plant1.mdl
+		$edit_field { "id" "358256" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_glassbottle001a.mdl
+		$edit_field { "id" "358276" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_coffeemug001a.mdl
+		$edit_field { "id" "358358" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_metalcan001a.mdl
+		$edit_field { "id" "358381" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_plasticbottle003a.mdl
+		$edit_field { "id" "397573" "fieldname" "m_CollisionGroup" "value" "1" } // ball.mdl
+		$edit_field { "id" "454426" "fieldname" "m_CollisionGroup" "value" "1" } // barricade002a.mdl
+		$edit_field { "id" "454509" "fieldname" "m_CollisionGroup" "value" "1" } // barricade002a.mdl
+		$edit_field { "id" "534343" "fieldname" "m_CollisionGroup" "value" "1" } // fo3_ball02.mdl
+		$edit_field { "id" "534351" "fieldname" "m_CollisionGroup" "value" "1" } // fo3_ball05.mdl
+		$edit_field { "id" "534374" "fieldname" "m_CollisionGroup" "value" "1" } // fo3_ball08.mdl
+		$edit_field { "id" "534393" "fieldname" "m_CollisionGroup" "value" "1" } // fo3_ball_10.mdl
+		$edit_field { "id" "534416" "fieldname" "m_CollisionGroup" "value" "1" } // fo3_ball_13.mdl
+		$edit_field { "id" "591103" "fieldname" "m_CollisionGroup" "value" "1" } // furniture_chair01a.mdl
+		$edit_field { "id" "591107" "fieldname" "m_CollisionGroup" "value" "1" } // furniture_chair01a.mdl
+		$edit_field { "id" "591111" "fieldname" "m_CollisionGroup" "value" "1" } // furniture_chair01a.mdl
+		$edit_field { "id" "591115" "fieldname" "m_CollisionGroup" "value" "1" } // furniture_chair01a.mdl
+		$edit_field { "id" "591163" "fieldname" "m_CollisionGroup" "value" "1" } // furniture_chair01a.mdl
+		$edit_field { "id" "591167" "fieldname" "m_CollisionGroup" "value" "1" } // furniture_chair01a.mdl
+		$edit_field { "id" "591171" "fieldname" "m_CollisionGroup" "value" "1" } // furniture_chair01a.mdl
+		$edit_field { "id" "591175" "fieldname" "m_CollisionGroup" "value" "1" } // furniture_chair01a.mdl
+		$edit_field { "id" "614749" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_plasticbottle003a.mdl
+		$edit_field { "id" "614753" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_metalcan001a.mdl
+		$edit_field { "id" "614769" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_plasticbottle002a.mdl
+		$edit_field { "id" "641431" "fieldname" "m_CollisionGroup" "value" "1" } // ng_cleopas_ladder.mdl
+		$edit_field { "id" "654335" "fieldname" "m_CollisionGroup" "value" "1" } // nmrih_office_plant1.mdl
+		$edit_field { "id" "66127" "fieldname" "m_CollisionGroup" "value" "1" } // door_barricade.mdl
+		$edit_field { "id" "709695" "fieldname" "m_CollisionGroup" "value" "1" } // wood_crate001a.mdl
+		$edit_field { "id" "721538" "fieldname" "m_CollisionGroup" "value" "1" } // cardboard_box003a.mdl
+		$edit_field { "id" "73135" "fieldname" "m_CollisionGroup" "value" "1" } // nmrih_office_plant1.mdl
+		$edit_field { "id" "84602" "fieldname" "m_CollisionGroup" "value" "1" } // dogobject_wood_crate001a_damagedmax.mdl
+		$edit_field { "id" "84617" "fieldname" "m_CollisionGroup" "value" "1" } // dogobject_wood_crate001a_damagedmax.mdl
+		$edit_field { "id" "84971" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_plasticbottle003a.mdl
+		$edit_field { "id" "84975" "fieldname" "m_CollisionGroup" "value" "1" } // wood_pallet001a_chunka.mdl
+		$edit_field { "id" "84979" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_glassbottle002a.mdl
+		$edit_field { "id" "85048" "fieldname" "m_CollisionGroup" "value" "1" } // garbage_takeoutcarton001a.mdl
+		$edit_field { "id" "862722" "fieldname" "m_CollisionGroup" "value" "1" } // gascan001a.mdl
+		$edit_field { "targetname" "obj2_key_physbox" "fieldname" "m_CollisionGroup" "value" "1" } // *23
+		$edit_field { "targetname" "obj5_key_physbox" "fieldname" "m_CollisionGroup" "value" "1" } // *104
+		$edit_field { "targetname" "obj6-welder_trap_cadenas" "fieldname" "m_CollisionGroup" "value" "1" } // prison_padlock001a.mdl
+		$edit_field { "targetname" "obj7_keybox_souterrain" "fieldname" "m_CollisionGroup" "value" "1" } // *140
+		$edit_field { "targetname" "obj8_wagonet_caisse_physbo2" "fieldname" "m_CollisionGroup" "value" "1" } // dogobject_wood_crate00
+		$edit_field { "targetname" "obj8_wagonet_caisse_physbo3" "fieldname" "m_CollisionGroup" "value" "1" } // wood_crate002a.mdl
+		$edit_field { "targetname" "obj8_wagonet_caisse_physbox" "fieldname" "m_CollisionGroup" "value" "1" } // wood_crate002a.mdl
+		$edit_field { "targetname" "obj8_wagonet_caisse_physbox4" "fieldname" "m_CollisionGroup" "value" "1" } // wood_crate001a.mdl
+		$edit_field { "targetname" "obj8_wagonet_caisse_physbox5" "fieldname" "m_CollisionGroup" "value" "1" } // wood_crate002a.mdl
+		$edit_field { "targetname" "obj8_wagonet_caisse_physbox6" "fieldname" "m_CollisionGroup" "value" "1" } // wood_crate002a.mdl
+		$edit_field { "targetname" "obj8_wagonet_can-physics" "fieldname" "m_CollisionGroup" "value" "1" } // rc_fuel_canister.mdl
+	}
+}
